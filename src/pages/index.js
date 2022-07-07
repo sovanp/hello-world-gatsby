@@ -1,13 +1,16 @@
-// import React
 import * as React from "react"
-// import Layout
 import Layout from "../components/layout"
+import { StaticImage } from "gatsby-plugin-image"
 
 // define component
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home Page">
       <p>I'm making this by following the Gatsby Tutorial.</p>
+      <StaticImage
+        alt="A picture of me"
+        src="../images/Profile_Picture.jpg"
+      />
     </Layout>
   )
 }
