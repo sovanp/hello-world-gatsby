@@ -1,0 +1,28 @@
+/* create container calss to store all elements */
+.container {
+    margin: auto;
+    max-width: 500px;
+    font-family: sans-serif;
+}
+
+/* header component */
+.heading {
+    color: rebeccapurple;
+}
+
+/* navigation links component */
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+/* navigation link item component */
+.nav-link-item {
+    padding-right: 2rem;
+}
+
+/* navigation link text component */
+.nav-link-text {
+    color: black;
+}
