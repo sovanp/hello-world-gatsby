@@ -1,12 +1,34 @@
 import * as React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
-const BlogPage = () => {
+// add data prop to function definition
+const BlogPage = ({ data }) => {
     return (
-        <Layout pageTitle="My Blog Posts">
-            <p>My cool posts will go here</p>
-        </Layout>
+    //use .map() method to iterate over the nodes arary and render the filename for each post
+      <Layout pageTitle="My Blog Posts">
+        <ul>
+        {
+          data.allFile.nodes.map(node => (
+            <li key={node.name}>
+              {node.name}
+            </li>
+          ))
+        }
+        </ul>
+      </Layout>
     )
-}
+  }
+
+// define and export page query. Query was built in GraphiQL
+export const query = graphql`
+  query {
+    allFile {
+      nodes {
+        name
+      }
+    }
+  }
+`
 
 export default BlogPage
