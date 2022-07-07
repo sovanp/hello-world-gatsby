@@ -33,7 +33,7 @@ const Layout = ({ pageTitle, children }) => {
         </main>
       </div>
     )
-}
+                }
 
 /*
 const Layout = ({ pageTitle, children }) => {
